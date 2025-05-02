@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="css/main.css">  
     <link rel="stylesheet" href="css/signup.css">
         
-    <title>Create Account</title>
+    <title>Crear Cuenta</title>
     <style>
         .container{
             animation: transitionIn-X 0.5s;
@@ -97,14 +97,14 @@ if($_POST){
         <table border="0" style="width: 69%;">
             <tr>
                 <td colspan="2">
-                    <p class="header-text">Let's Get Started</p>
-                    <p class="sub-text">It's Okey, Now Create User Account.</p>
+                    <p class="header-text">Comencemos</p>
+                    <p class="sub-text">Está bien, ahora crea una cuenta de usuario.</p>
                 </td>
             </tr>
             <tr>
                 <form action="" method="POST" >
                 <td class="label-td" colspan="2">
-                    <label for="newemail" class="form-label">Email: </label>
+                    <label for="newemail" class="form-label">Correo: </label>
                 </td>
             </tr>
             <tr>
@@ -115,7 +115,7 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="tele" class="form-label">Mobile Number: </label>
+                    <label for="tele" class="form-label">Número de teléfono: </label>
                 </td>
             </tr>
             <tr>
@@ -125,7 +125,7 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="newpassword" class="form-label">Create New Password: </label>
+                    <label for="newpassword" class="form-label">Crear nueva contraseña: </label>
                 </td>
             </tr>
             <tr>
@@ -135,7 +135,7 @@ if($_POST){
             </tr>
             <tr>
                 <td class="label-td" colspan="2">
-                    <label for="cpassword" class="form-label">Conform Password: </label>
+                    <label for="cpassword" class="form-label">Confirmar contraseña: </label>
                 </td>
             </tr>
             <tr>
@@ -164,8 +164,8 @@ if($_POST){
             <tr>
                 <td colspan="2">
                     <br>
-                    <label for="" class="sub-text" style="font-weight: 280;">Already have an account&#63; </label>
-                    <a href="login.php" class="hover-link1 non-style-link">Login</a>
+                    <label for="" class="sub-text" style="font-weight: 280;">Ya tienes una cuenta&#63; </label>
+                    <a href="login.php" class="hover-link1 non-style-link">Iniciar sesión</a>
                     <br><br><br>
                 </td>
             </tr>
