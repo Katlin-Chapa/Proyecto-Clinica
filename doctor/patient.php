@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/main.css">  
     <link rel="stylesheet" href="../css/admin.css">
         
-    <title>Patients</title>
+    <title>Pacientes</title>
     <style>
         .popup{
             animation: transitionIn-Y-bottom 0.5s;
@@ -78,23 +78,23 @@
                 </tr>
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-appoinment">
-                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">My Appointments</p></a></div>
+                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Mis citas</p></a></div>
                     </td>
                 </tr>
                 
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-session">
-                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">My Sessions</p></div></a>
+                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Mis sesiones</p></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-patient menu-active menu-icon-patient-active">
-                        <a href="patient.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">My Patients</p></a></div>
+                        <a href="patient.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">Mis pacientes</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-settings   ">
-                        <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Settings</p></a></div>
+                        <a href="settings.php" class="non-style-link-menu"><div><p class="menu-text">Ajustes</p></a></div>
                     </td>
                 </tr>
                 
@@ -137,7 +137,7 @@
                 <tr >
                     <td width="13%">
 
-                    <a href="patient.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
+                    <a href="patient.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Regresar</font></button></a>
                         
                     </td>
                     <td>
@@ -170,7 +170,7 @@
                     </td>
                     <td width="15%">
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Today's Date
+                            Fecha de hoy
                         </p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
@@ -203,13 +203,13 @@
                         <form action="" method="post">
                         
                         <td  style="text-align: right;">
-                        Show Details About : &nbsp;
+                        Mostrar detalles sobre : &nbsp;
                         </td>
                         <td width="30%">
                         <select name="showonly" id="" class="box filter-container-items" style="width:90% ;height: 37px;margin: 0;" >
                                     <option value="" disabled selected hidden><?php echo $current   ?></option><br/>
-                                    <option value="my">My Patients Only</option><br/>
-                                    <option value="all">All Patients</option><br/>
+                                    <option value="my">Mis pacientes unicamente</option><br/>
+                                    <option value="all">Todos los pacientes</option><br/>
                                     
 
                         </select>
@@ -237,32 +237,32 @@
                                 <th class="table-headin">
                                     
                                 
-                                Name
+                                Nombre
                                 
                                 </th>
                                 <th class="table-headin">
                                     
                                 
-                                    NIC
+                                    CUI
                                     
                                 </th>
                                 <th class="table-headin">
                                 
                             
-                                Telephone
+                                Teléfono
                                 
                                 </th>
                                 <th class="table-headin">
-                                    Email
+                                    Correo
                                 </th>
                                 <th class="table-headin">
                                     
-                                    Date of Birth
+                                    Fecha de nacimiento
                                     
                                 </th>
                                 <th class="table-headin">
                                     
-                                    Events
+                                    Acciones
                                     
                                 </tr>
                         </thead>
