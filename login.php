@@ -18,7 +18,7 @@
     $_SESSION["user"]="";
     $_SESSION["usertype"]="";
 
-    date_default_timezone_set('Asia/Kolkata');
+    date_default_timezone_set('America/Guatemala');
     $date = date('Y-m-d');
 
     $_SESSION["date"]=$date;
