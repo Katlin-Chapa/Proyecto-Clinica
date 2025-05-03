@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="../css/main.css">  
     <link rel="stylesheet" href="../css/admin.css">
         
-    <title>Patients</title>
+    <title>Pacientes</title>
     <style>
         .popup{
             animation: transitionIn-Y-bottom 0.5s;
@@ -52,7 +52,7 @@
                                     <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
                                 </td>
                                 <td style="padding:0px;margin:0px;">
-                                    <p class="profile-title">Administrator</p>
+                                    <p class="profile-title">Administrador</p>
                                     <p class="profile-subtitle">admin@edoc.com</p>
                                 </td>
                             </tr>
@@ -71,22 +71,22 @@
                 </tr>
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-doctor ">
-                        <a href="doctors.php" class="non-style-link-menu "><div><p class="menu-text">Doctors</p></a></div>
+                        <a href="doctors.php" class="non-style-link-menu "><div><p class="menu-text">Doctores</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-schedule">
-                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Schedule</p></div></a>
+                        <a href="schedule.php" class="non-style-link-menu"><div><p class="menu-text">Horario</p></div></a>
                     </td>
                 </tr>
                 <tr class="menu-row">
                     <td class="menu-btn menu-icon-appoinment">
-                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Appointment</p></a></div>
+                        <a href="appointment.php" class="non-style-link-menu"><div><p class="menu-text">Cita</p></a></div>
                     </td>
                 </tr>
                 <tr class="menu-row" >
                     <td class="menu-btn menu-icon-patient  menu-active menu-icon-patient-active">
-                        <a href="patient.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">Patients</p></a></div>
+                        <a href="patient.php" class="non-style-link-menu  non-style-link-menu-active"><div><p class="menu-text">Paciente</p></a></div>
                     </td>
                 </tr>
 
@@ -150,7 +150,7 @@
                 
                 <tr>
                     <td colspan="4" style="padding-top:10px;">
-                        <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">All Patients (<?php echo $list11->num_rows; ?>)</p>
+                        <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49)">Todos los pacientes (<?php echo $list11->num_rows; ?>)</p>
                     </td>
                     
                 </tr>
@@ -178,32 +178,32 @@
                                 <th class="table-headin">
                                     
                                 
-                                Name
+                                Nombre
                                 
                                 </th>
                                 <th class="table-headin">
                                     
                                 
-                                    NIC
+                                    CUI
                                     
                                 </th>
                                 <th class="table-headin">
                                 
                             
-                                Telephone
+                                Teléfono
                                 
                                 </th>
                                 <th class="table-headin">
-                                    Email
+                                    Correo
                                 </th>
                                 <th class="table-headin">
                                     
-                                    Date of Birth
+                                    Fecha de nacimiento
                                     
                                 </th>
                                 <th class="table-headin">
                                     
-                                    Events
+                                    Acciones
                                     
                                 </tr>
                         </thead>
