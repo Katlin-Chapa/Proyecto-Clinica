@@ -58,7 +58,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                <a href="../logout.php" ><input type="button" value="Cerrar Sesión" class="logout-btn btn-primary-soft btn"></a>
                                 </td>
                             </tr>
                     </table>
@@ -95,16 +95,12 @@
         <div class="dash-body">
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
-                    <td width="13%">
 
-                    <a href="patient.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Back</font></button></a>
-                        
-                    </td>
                     <td>
                         
                         <form action="" method="post" class="header-search">
 
-                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Patient name or Email" list="patient">&nbsp;&nbsp;
+                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Buscar paciente por nombre o correo" list="patient">&nbsp;&nbsp;
                             
                             <?php
                                 echo '<datalist id="patient">';
@@ -122,18 +118,18 @@
 ?>
                             
                        
-                            <input type="Submit" value="Search" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
+                            <input type="Submit" value="Buscar" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
                         
                         </form>
                         
                     </td>
                     <td width="15%">
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Today's Date
+                            Fecha de hoy
                         </p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('America/Guatemala');
 
                         $date = date('Y-m-d');
                         echo $date;
@@ -260,7 +256,7 @@
                                         <td >
                                         <div style="display:flex;justify-content: center;">
                                         
-                                        <a href="?action=view&id='.$pid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
+                                        <a href="?action=view&id='.$pid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Ver</font></button></a>
                                        
                                         </div>
                                         </td>
@@ -311,13 +307,13 @@
                         
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Ver detalles</p><br><br>
                                 </td>
                             </tr>
                             <tr>
                                 
                                 <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Patient ID: </label>
+                                    <label for="name" class="form-label">ID: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -330,7 +326,7 @@
                             <tr>
                                 
                                 <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Name: </label>
+                                    <label for="name" class="form-label">Nombre: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -351,7 +347,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">NIC: </label>
+                                    <label for="nic" class="form-label">DPI: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -361,7 +357,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Telephone: </label>
+                                    <label for="Tele" class="form-label">Teléfono: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -371,7 +367,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Address: </label>
+                                    <label for="spec" class="form-label">Dirección: </label>
                                     
                                 </td>
                             </tr>
@@ -383,7 +379,7 @@
                             <tr>
                                 
                                 <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Date of Birth: </label>
+                                    <label for="name" class="form-label">Fecha de Nacimiento: </label>
                                 </td>
                             </tr>
                             <tr>

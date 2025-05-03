@@ -62,7 +62,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                <a href="../logout.php" ><input type="button" value="Cerrar Sesión" class="logout-btn btn-primary-soft btn"></a>
                                 </td>
                             </tr>
                     </table>
@@ -101,14 +101,11 @@
         <div class="dash-body">
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
-                    <td width="13%">
-                        <a href="doctors.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Regresar</font></button></a>
-                    </td>
                     <td>
                         
                         <form action="" method="post" class="header-search">
 
-                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email" list="doctors">&nbsp;&nbsp;
+                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Buscar doctor por nombre o correo" list="doctors">&nbsp;&nbsp;
                             
                             <?php
                                 echo '<datalist id="doctors">';
@@ -126,18 +123,18 @@
 ?>
                             
                        
-                            <input type="Submit" value="Search" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
+                            <input type="Submit" value="Buscar" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
                         
                         </form>
                         
                     </td>
                     <td width="15%">
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Today's Date
+                            Fecha de hoy
                         </p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('America/Guatemala');
 
                         $date = date('Y-m-d');
                         echo $date;
@@ -247,9 +244,9 @@
                                         <td>
                                         <div style="display:flex;justify-content: center;">
                                         
-                                        <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
+                                        <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Ver</font></button></a>
                                        &nbsp;&nbsp;&nbsp;
-                                       <a href="?action=session&id='.$docid.'&name='.$name.'"  class="non-style-link"><button  class="btn-primary-soft btn button-icon menu-icon-session-active"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Sessions</font></button></a>
+                                       <a href="?action=session&id='.$docid.'&name='.$name.'"  class="non-style-link"><button  class="btn-primary-soft btn button-icon menu-icon-session-active"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Sesiones</font></button></a>
                                         </div>
                                         </td>
                                     </tr>';
@@ -283,14 +280,14 @@
             <div id="popup1" class="overlay">
                     <div class="popup">
                     <center>
-                        <h2>Are you sure?</h2>
+                        <h2>¿Está seguro?</h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br>('.substr($nameget,0,40).').
+                            ¿Deseas eliminar este registro?<br>('.substr($nameget,0,40).').
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                        <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Si&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
                         <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;No&nbsp;&nbsp;</font></button></a>
 
                         </div>
@@ -324,23 +321,20 @@
                     <center>
                         <h2></h2>
                         <a class="close" href="doctors.php">&times;</a>
-                        <div class="content">
-                            eDoc Web App<br>
-                            
-                        </div>
+
                         <div style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
                         
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Ver detalles</p><br><br>
                                 </td>
                             </tr>
                             
                             <tr>
                                 
                                 <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Name: </label>
+                                    <label for="name" class="form-label">Nombre: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -361,7 +355,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">NIC: </label>
+                                    <label for="nic" class="form-label">DPI: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -371,7 +365,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Telephone: </label>
+                                    <label for="Tele" class="form-label">Teléfono: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -381,7 +375,8 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Specialties: </label>
+                                    <label for="spec" class="form-label">Especialidad:
+ </label>
                                     
                                 </td>
                             </tr>
@@ -413,10 +408,10 @@
             <div id="popup1" class="overlay">
                     <div class="popup">
                     <center>
-                        <h2>Redirect to Doctors sessions?</h2>
+                        <h2>Redireccionar a las sesiones de doctores</h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            You want to view All sessions by <br>('.substr($name,0,40).').
+                            Quieres ver todas las sesiones por <br>('.substr($name,0,40).').
                             
                         </div>
                         <form action="schedule.php" method="post" style="display: flex">
@@ -426,7 +421,7 @@
                                 
                         <div style="display: flex;justify-content:center;margin-left:45%;margin-top:6%;;margin-bottom:6%;">
                         
-                        <input type="submit"  value="Yes" class="btn-primary btn"   >
+                        <input type="submit"  value="Si" class="btn-primary btn"   >
                         
                         
                         </div>
@@ -460,8 +455,8 @@
 
             $error_1=$_GET["error"];
                 $errorlist= array(
-                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Already have an account for this Email address.</label>',
-                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>',
+                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Ya tengo una cuenta para esta dirección de correo electrónico.</label>',
+                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">¡Error de confirmación de contraseña! ¡Reconfirmar contraseña!</label>',
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
@@ -504,7 +499,7 @@
                                     <tr>
                                         
                                         <td class="label-td" colspan="2">
-                                            <label for="name" class="form-label">Name: </label>
+                                            <label for="name" class="form-label">Nombre: </label>
                                         </td>
                                     </tr>
                                     <tr>
@@ -516,7 +511,7 @@
                                     
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="nic" class="form-label">NIC: </label>
+                                            <label for="nic" class="form-label">DPI: </label>
                                         </td>
                                     </tr>
                                     <tr>
@@ -526,7 +521,7 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="Tele" class="form-label">Telephone: </label>
+                                            <label for="Tele" class="form-label">Teléfono: </label>
                                         </td>
                                     </tr>
                                     <tr>
@@ -583,9 +578,9 @@
                         
                                     <tr>
                                         <td colspan="2">
-                                            <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="reset" value="Reinciar" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         
-                                            <input type="submit" value="Save" class="login-btn btn-primary btn">
+                                            <input type="submit" value="Guardar" class="login-btn btn-primary btn">
                                         </td>
                         
                                     </tr>
@@ -606,7 +601,7 @@
                         <div class="popup">
                         <center>
                         <br><br><br><br>
-                            <h2>Edit Successfully!</h2>
+                            <h2>Actualizado correctamente</h2>
                             <a class="close" href="doctors.php">&times;</a>
                             <div class="content">
                                 

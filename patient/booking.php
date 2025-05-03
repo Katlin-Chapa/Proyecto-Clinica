@@ -55,7 +55,7 @@
     
 
 
-    date_default_timezone_set('Asia/Kolkata');
+    date_default_timezone_set('America/Guatemala');
 
     $today = date('Y-m-d');
 
@@ -79,7 +79,7 @@
                          </tr>
                          <tr>
                              <td colspan="2">
-                                 <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                 <a href="../logout.php" ><input type="button" value="Cerrar Sesión" class="logout-btn btn-primary-soft btn"></a>
                              </td>
                          </tr>
                  </table>
@@ -118,13 +118,10 @@
         <div class="dash-body">
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
-                    <td width="13%" >
-                    <a href="schedule.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Regresar</font></button></a>
-                    </td>
                     <td >
                             <form action="schedule.php" method="post" class="header-search">
 
-                                        <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email or Date (YYYY-MM-DD)" list="doctors" >&nbsp;&nbsp;
+                                        <input type="search" name="search" class="input-text header-searchbar" placeholder="Buscar doctor por nombre o fecha (YYYY-MM-DD)" list="doctors" >&nbsp;&nbsp;
                                         
                                         <?php
                                             echo '<datalist id="doctors">';
@@ -155,12 +152,12 @@
             ?>
                                         
                                 
-                                        <input type="Submit" value="Search" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
+                                        <input type="Submit" value="Buscar" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
                                         </form>
                     </td>
                     <td width="15%">
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Today's Date
+                            Fecha de hoy
                         </p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
@@ -183,7 +180,7 @@
                 
                 <tr>
                     <td colspan="4" style="padding-top:10px;width: 100%;" >
-                        <!-- <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49);font-weight:400;">Scheduled Sessions / Booking / <b>Review Booking</b></p> -->
+                        <!-- <p class="heading-main12" style="margin-left: 45px;font-size:18px;color:rgb(49, 49, 49);font-weight:400;">Scheduled Sessions / Booking / <b>Ver reserva</b></p> -->
                         
                     </td>
                     
@@ -254,10 +251,10 @@
                                                           
                                                         </div><br>
                                                         <div class="h3-search" style="font-size:18px;">
-                                                            Session Title: '.$title.'<br>
-                                                            Session Scheduled Date: '.$scheduledate.'<br>
-                                                            Session Starts : '.$scheduletime.'<br>
-                                                            Channeling fee : <b>LKR.2 000.00</b>
+                                                            Sesión: '.$title.'<br>
+                                                            Fecha: '.$scheduledate.'<br>
+                                                            Inicio: '.$scheduletime.'<br>
+                                                            Canal: <b>LKR.2 000.00</b>
 
                                                         </div>
                                                         <br>

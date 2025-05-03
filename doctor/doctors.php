@@ -60,7 +60,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                <a href="../logout.php" ><input type="button" value="Cerrar Sesión" class="logout-btn btn-primary-soft btn"></a>
                                 </td>
                             </tr>
                     </table>
@@ -98,14 +98,11 @@
         <div class="dash-body">
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
-                    <td width="13%">
-                        <a href="doctors.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Regresar</font></button></a>
-                    </td>
                     <td>
                         
                         <form action="" method="post" class="header-search">
 
-                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Search Doctor name or Email" list="doctors">&nbsp;&nbsp;
+                            <input type="search" name="search" class="input-text header-searchbar" placeholder="Buscar doctor por nombre o correo" list="doctors">&nbsp;&nbsp;
                             
                             <?php
                                 echo '<datalist id="doctors">';
@@ -123,18 +120,18 @@
 ?>
                             
                        
-                            <input type="Submit" value="Search" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
+                            <input type="Submit" value="Buscar" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
                         
                         </form>
                         
                     </td>
                     <td width="15%">
                         <p style="font-size: 14px;color: rgb(119, 119, 119);padding: 0;margin: 0;text-align: right;">
-                            Today's Date
+                            Fecha de hoy
                         </p>
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('America/Guatemala');
 
                         $date = date('Y-m-d');
                         echo $date;
@@ -250,11 +247,11 @@
 
                                         <td>
                                         <div style="display:flex;justify-content: center;">
-                                        <a href="?action=edit&id='.$docid.'&error=0" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-edit"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Edit</font></button></a>
+                                        <a href="?action=edit&id='.$docid.'&error=0" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-edit"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Editar</font></button></a>
                                         &nbsp;&nbsp;&nbsp;
-                                        <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
+                                        <a href="?action=view&id='.$docid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Ver</font></button></a>
                                        &nbsp;&nbsp;&nbsp;
-                                       <a href="?action=drop&id='.$docid.'&name='.$name.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Remove</font></button></a>
+                                       <a href="?action=drop&id='.$docid.'&name='.$name.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Eliminar</font></button></a>
                                         </div>
                                         </td>
                                     </tr>';
@@ -288,14 +285,14 @@
             <div id="popup1" class="overlay">
                     <div class="popup">
                     <center>
-                        <h2>Are you sure?</h2>
+                        <h2>¿Está seguro?</h2>
                         <a class="close" href="doctors.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br>('.substr($nameget,0,40).').
+                            ¿Deseas eliminar este registro?<br>('.substr($nameget,0,40).').
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                        <a href="delete-doctor.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Si&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
                         <a href="doctors.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;No&nbsp;&nbsp;</font></button></a>
 
                         </div>
@@ -322,23 +319,21 @@
                     <center>
                         <h2></h2>
                         <a class="close" href="doctors.php">&times;</a>
-                        <div class="content">
-                            eDoc Web App<br>
-                            
+                        <div class="content">                            
                         </div>
                         <div style="display: flex;justify-content: center;">
                         <table width="80%" class="sub-table scrolldown add-doc-form-container" border="0">
                         
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Ver detalles</p><br><br>
                                 </td>
                             </tr>
                             
                             <tr>
                                 
                                 <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Name: </label>
+                                    <label for="name" class="form-label">Nombre: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -359,7 +354,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">NIC: </label>
+                                    <label for="nic" class="form-label">DPI:: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -369,7 +364,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Telephone: </label>
+                                    <label for="Tele" class="form-label">Telefono: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -379,7 +374,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Specialties: </label>
+                                    <label for="spec" class="form-label">Especialidades: </label>
                                     
                                 </td>
                             </tr>
@@ -408,8 +403,8 @@
         }elseif($action=='add'){
                 $error_1=$_GET["error"];
                 $errorlist= array(
-                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Already have an account for this Email address.</label>',
-                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>',
+                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Ya tengo una cuenta para esta dirección de correo electrónico.</label>',
+                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">¡Error de confirmación de contraseña! ¡Reconfirmar contraseña!</label>',
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
@@ -432,19 +427,19 @@
                             </tr>
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Add New Doctor.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Agregar nuevo Doctor</p><br><br>
                                 </td>
                             </tr>
                             
                             <tr>
                                 <form action="add-new.php" method="POST" class="add-new-form">
                                 <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Name: </label>
+                                    <label for="name" class="form-label">Nombre: </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="text" name="name" class="input-text" placeholder="Doctor Name" required><br>
+                                    <input type="text" name="name" class="input-text" placeholder="Nombre del doctor" required><br>
                                 </td>
                                 
                             </tr>
@@ -460,27 +455,27 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">NIC: </label>
+                                    <label for="nic" class="form-label">DPI:: </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="text" name="nic" class="input-text" placeholder="NIC Number" required><br>
+                                    <input type="text" name="nic" class="input-text" placeholder="Numero de DPI:" required><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Telephone: </label>
+                                    <label for="Tele" class="form-label">Teléfono: </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="tel" name="Tele" class="input-text" placeholder="Telephone Number" required><br>
+                                    <input type="tel" name="Tele" class="input-text" placeholder="Numero de Teléfono" required><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label">Choose specialties: </label>
+                                    <label for="spec" class="form-label">Seleccione la especialidad: </label>
                                     
                                 </td>
                             </tr>
@@ -506,30 +501,30 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="password" class="form-label">Password: </label>
+                                    <label for="password" class="form-label">Contraseña: </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="password" name="password" class="input-text" placeholder="Defind a Password" required><br>
+                                    <input type="password" name="password" class="input-text" placeholder="Escriba la contraseña" required><br>
                                 </td>
                             </tr><tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="cpassword" class="form-label">Conform Password: </label>
+                                    <label for="cpassword" class="form-label">Confirme la contraseña: </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="password" name="cpassword" class="input-text" placeholder="Conform Password" required><br>
+                                    <input type="password" name="cpassword" class="input-text" placeholder="Confirmación de contraseña" required><br>
                                 </td>
                             </tr>
                             
                 
                             <tr>
                                 <td colspan="2">
-                                    <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="reset" value="Reiniciar" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 
-                                    <input type="submit" value="Add" class="login-btn btn-primary btn">
+                                    <input type="submit" value="Agregar" class="login-btn btn-primary btn">
                                 </td>
                 
                             </tr>
@@ -551,7 +546,7 @@
                             <div class="popup">
                             <center>
                             <br><br><br><br>
-                                <h2>New Record Added Successfully!</h2>
+                                <h2>Nuevo registro agregado exitosamente</h2>
                                 <a class="close" href="doctors.php">&times;</a>
                                 <div class="content">
                                     
@@ -584,8 +579,8 @@
 
             $error_1=$_GET["error"];
                 $errorlist= array(
-                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Already have an account for this Email address.</label>',
-                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Password Conformation Error! Reconform Password</label>',
+                    '1'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">Ya tengo una cuenta para esta dirección de correo electrónico.</label>',
+                    '2'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;">¡Error de confirmación de contraseña! ¡Reconfirmar contraseña!</label>',
                     '3'=>'<label for="promter" class="form-label" style="color:rgb(255, 62, 62);text-align:center;"></label>',
                     '4'=>"",
                     '0'=>'',
@@ -609,7 +604,7 @@
                                     </tr>
                                     <tr>
                                         <td>
-                                            <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Edit Doctor Details.</p>
+                                            <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Editar Doctor</p>
                                         Doctor ID : '.$id.' (Auto Generated)<br><br>
                                         </td>
                                     </tr>
@@ -622,45 +617,45 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                        <input type="email" name="email" class="input-text" placeholder="Email Address" value="'.$email.'" required><br>
+                                        <input type="email" name="email" class="input-text" placeholder="" value="'.$email.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>
                                         
                                         <td class="label-td" colspan="2">
-                                            <label for="name" class="form-label">Name: </label>
+                                            <label for="name" class="form-label">Nombre: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="text" name="name" class="input-text" placeholder="Doctor Name" value="'.$name.'" required><br>
+                                            <input type="text" name="name" class="input-text" placeholder="Nombre del doctor" value="'.$name.'" required><br>
                                         </td>
                                         
                                     </tr>
                                     
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="nic" class="form-label">NIC: </label>
+                                            <label for="nic" class="form-label">DPI:: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="text" name="nic" class="input-text" placeholder="NIC Number" value="'.$nic.'" required><br>
+                                            <input type="text" name="nic" class="input-text" placeholder="" value="'.$nic.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="Tele" class="form-label">Telephone: </label>
+                                            <label for="Tele" class="form-label">Telefono: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="tel" name="Tele" class="input-text" placeholder="Telephone Number" value="'.$tele.'" required><br>
+                                            <input type="tel" name="Tele" class="input-text" placeholder="" value="'.$tele.'" required><br>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="spec" class="form-label">Choose specialties: (Current'.$spcil_name.')</label>
+                                            <label for="spec" class="form-label">Seleccione la especialidad: (Current'.$spcil_name.')</label>
                                             
                                         </td>
                                     </tr>
@@ -686,16 +681,16 @@
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="password" class="form-label">Password: </label>
+                                            <label for="password" class="form-label">Contraseña: </label>
                                         </td>
                                     </tr>
                                     <tr>
                                         <td class="label-td" colspan="2">
-                                            <input type="password" name="password" class="input-text" placeholder="Defind a Password" required><br>
+                                            <input type="password" name="password" class="input-text" placeholder="" required><br>
                                         </td>
                                     </tr><tr>
                                         <td class="label-td" colspan="2">
-                                            <label for="cpassword" class="form-label">Conform Password: </label>
+                                            <label for="cpassword" class="form-label">Confirme la contraseña: </label>
                                         </td>
                                     </tr>
                                     <tr>
@@ -707,9 +702,9 @@
                         
                                     <tr>
                                         <td colspan="2">
-                                            <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <input type="reset" value="Reiniciar" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                         
-                                            <input type="submit" value="Save" class="login-btn btn-primary btn">
+                                            <input type="submit" value="Guardar" class="login-btn btn-primary btn">
                                         </td>
                         
                                     </tr>
@@ -730,7 +725,7 @@
                         <div class="popup">
                         <center>
                         <br><br><br><br>
-                            <h2>Edit Successfully!</h2>
+                            <h2>Actualizado correctamente</h2>
                             <a class="close" href="doctors.php">&times;</a>
                             <div class="content">
                                 

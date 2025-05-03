@@ -74,7 +74,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                    <a href="../logout.php" ><input type="button" value="Cerrar Sesión" class="logout-btn btn-primary-soft btn"></a>
                                 </td>
                             </tr>
                     </table>
@@ -127,7 +127,7 @@
                                 </p>
                                 <p class="heading-sub12" style="padding: 0;margin: 0;">
                                     <?php 
-                                date_default_timezone_set('Asia/Kolkata');
+                                date_default_timezone_set('America/Guatemala');
         
                                 $today = date('Y-m-d');
                                 echo $today;
@@ -155,10 +155,9 @@
                     <table class="filter-container doctor-header" style="border: none;width:95%" border="0" >
                     <tr>
                         <td >
-                            <h3>Welcome!</h3>
+                            <h3>¡Bienvenido!</h3>
                             <h1><?php echo $username  ?>.</h1>
-                            <p>Gracias por unirte a nosotros. Siempre estamos intentando brindarte un servicio completo<br>
-                            Puedes ver tu agenda diaria y atender las citas de los pacientes desde casa!<br><br>
+                      
                             </p>
                             <a href="appointment.php" class="non-style-link"><button class="btn-primary btn" style="width:30%">Ver mis citas</button></a>
                             <br>
@@ -303,7 +302,7 @@
                                                     
                                                     <br>
                                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
-                                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Sessions &nbsp;</font></button>
+                                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las sesiones&nbsp;</font></button>
                                                     </a>
                                                     </center>
                                                     <br><br><br><br>

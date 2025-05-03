@@ -58,7 +58,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                <a href="../logout.php" ><input type="button" value="Cerrar Sesión" class="logout-btn btn-primary-soft btn"></a>
                                 </td>
                             </tr>
                     </table>
@@ -96,9 +96,6 @@
         <div class="dash-body">
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
-                    <td width="13%" >
-                    <a href="schedule.php" ><button  class="login-btn btn-primary-soft btn btn-icon-back"  style="padding-top:11px;padding-bottom:11px;margin-left:20px;width:125px"><font class="tn-in-text">Regresar</font></button></a>
-                    </td>
                     <td>
                         <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Gestor de Citas</p>
                                            
@@ -110,7 +107,7 @@
                         <p class="heading-sub12" style="padding: 0;margin: 0;">
                             <?php 
 
-                        date_default_timezone_set('Asia/Kolkata');
+                        date_default_timezone_set('America/Guatemala');
 
                         $today = date('Y-m-d');
                         echo $today;
@@ -131,7 +128,7 @@
                     <td colspan="4" >
                         <div style="display: flex;margin-top: 40px;">
                         <div class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49);margin-top: 5px;">Programar una sesión</div>
-                        <a href="?action=add-session&id=none&error=0" class="non-style-link"><button  class="login-btn btn-primary btn button-icon"  style="margin-left:25px;background-image: url('../img/icons/add.svg');">Add a Session</font></button>
+                        <a href="?action=add-session&id=none&error=0" class="non-style-link"><button  class="login-btn btn-primary btn button-icon"  style="margin-left:25px;background-image: url('../img/icons/add.svg');">Agregar una Sesión</font></button>
                         </a>
                         </div>
                     </td>
@@ -152,7 +149,7 @@
 
                            </td> 
                         <td width="5%" style="text-align: center;">
-                        Date:
+                        Fecha:
                         </td>
                         <td width="30%">
                         <form action="" method="post">
@@ -184,7 +181,7 @@
                         </select>
                     </td>
                     <td width="12%">
-                        <input type="submit"  name="filter" value=" Filter" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
+                        <input type="submit"  name="filter" value=" Filtrar" class=" btn-primary-soft btn button-icon btn-filter"  style="padding: 15px; margin :0;width:100%">
                         </form>
                     </td>
 
@@ -288,7 +285,7 @@
                                     
                                     <br>
                                     <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
-                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Sessions &nbsp;</font></button>
+                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las sesiones&nbsp;</font></button>
                                     </a>
                                     </center>
                                     <br><br><br><br>
@@ -322,9 +319,9 @@
                                         <td>
                                         <div style="display:flex;justify-content: center;">
                                         
-                                        <a href="?action=view&id='.$scheduleid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">View</font></button></a>
+                                        <a href="?action=view&id='.$scheduleid.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-view"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Ver</font></button></a>
                                        &nbsp;&nbsp;&nbsp;
-                                       <a href="?action=drop&id='.$scheduleid.'&name='.$title.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Remove</font></button></a>
+                                       <a href="?action=drop&id='.$scheduleid.'&name='.$title.'" class="non-style-link"><button  class="btn-primary-soft btn button-icon btn-delete"  style="padding-left: 40px;padding-top: 12px;padding-bottom: 12px;margin-top: 10px;"><font class="tn-in-text">Eliminar</font></button></a>
                                         </div>
                                         </td>
                                     </tr>';
@@ -373,24 +370,24 @@
 
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Add New Session.</p><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Agregar nueva sesión</p><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
                                 <form action="add-session.php" method="POST" class="add-new-form">
-                                    <label for="title" class="form-label">Session Title : </label>
+                                    <label for="title" class="form-label">Nombre para la sesión : </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="text" name="title" class="input-text" placeholder="Name of this Session" required><br>
+                                    <input type="text" name="title" class="input-text" placeholder="" required><br>
                                 </td>
                             </tr>
                             <tr>
                                 
                                 <td class="label-td" colspan="2">
-                                    <label for="docid" class="form-label">Select Doctor: </label>
+                                    <label for="docid" class="form-label">Seleccione el doctor </label>
                                 </td>
                             </tr>
                             <tr>
@@ -416,17 +413,17 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nop" class="form-label">Number of Patients/Appointment Numbers : </label>
+                                    <label for="nop" class="form-label">Número de pacientes / Número de Citas </label>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <input type="number" name="nop" class="input-text" min="0"  placeholder="The final appointment number for this session depends on this number" required><br>
+                                    <input type="number" name="nop" class="input-text" min="0"  placeholder="El número de cita final para esta sesión depende de este número." required><br>
                                 </td>
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="date" class="form-label">Session Date: </label>
+                                    <label for="date" class="form-label">Fecha: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -436,7 +433,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="time" class="form-label">Schedule Time: </label>
+                                    <label for="time" class="form-label">Horario programado: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -447,9 +444,9 @@
                            
                             <tr>
                                 <td colspan="2">
-                                    <input type="reset" value="Reset" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="reset" value="Reiniciar" class="login-btn btn-primary-soft btn" >&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                                 
-                                    <input type="submit" value="Place this Session" class="login-btn btn-primary btn" name="shedulesubmit">
+                                    <input type="submit" value="Coloque esta sesión" class="login-btn btn-primary btn" name="shedulesubmit">
                                 </td>
                 
                             </tr>
@@ -492,14 +489,14 @@
             <div id="popup1" class="overlay">
                     <div class="popup">
                     <center>
-                        <h2>Are you sure?</h2>
+                        <h2>¿Está seguro?</h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                            You want to delete this record<br>('.substr($nameget,0,40).').
+                            ¿Deseas eliminar este registro?<br>('.substr($nameget,0,40).').
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
-                        <a href="delete-session.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Yes&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
+                        <a href="delete-session.php?id='.$id.'" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"<font class="tn-in-text">&nbsp;Si&nbsp;</font></button></a>&nbsp;&nbsp;&nbsp;
                         <a href="schedule.php" class="non-style-link"><button  class="btn-primary btn"  style="display: flex;justify-content: center;align-items: center;margin:10px;padding:10px;"><font class="tn-in-text">&nbsp;&nbsp;No&nbsp;&nbsp;</font></button></a>
 
                         </div>
@@ -538,14 +535,14 @@
                         
                             <tr>
                                 <td>
-                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">View Details.</p><br><br>
+                                    <p style="padding: 0;margin: 0;text-align: left;font-size: 25px;font-weight: 500;">Ver detalles</p><br><br>
                                 </td>
                             </tr>
                             
                             <tr>
                                 
                                 <td class="label-td" colspan="2">
-                                    <label for="name" class="form-label">Session Title: </label>
+                                    <label for="name" class="form-label">Sesión: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -556,7 +553,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="Email" class="form-label">Doctor of this session: </label>
+                                    <label for="Email" class="form-label">Doctor: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -566,7 +563,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">Scheduled Date: </label>
+                                    <label for="nic" class="form-label">Fecha: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -576,7 +573,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="Tele" class="form-label">Scheduled Time: </label>
+                                    <label for="Tele" class="form-label">Hora: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -586,7 +583,7 @@
                             </tr>
                             <tr>
                                 <td class="label-td" colspan="2">
-                                    <label for="spec" class="form-label"><b>Patients that Already registerd for this session:</b> ('.$result12->num_rows."/".$nop.')</label>
+                                    <label for="spec" class="form-label"><b>Pacientes que ya se registraron para esta sesión:</b> ('.$result12->num_rows."/".$nop.')</label>
                                     <br><br>
                                 </td>
                             </tr>
@@ -600,20 +597,20 @@
                                  <thead>
                                  <tr>   
                                         <th class="table-headin">
-                                             Patient ID
+                                             ID
                                          </th>
                                          <th class="table-headin">
-                                             Patient name
+                                             Nombre
                                          </th>
                                          <th class="table-headin">
                                              
-                                             Appointment number
+                                             Número de cita
                                              
                                          </th>
                                         
                                          
                                          <th class="table-headin">
-                                             Patient Telephone
+                                             Telefono
                                          </th>
                                          
                                  </thead>
@@ -633,7 +630,7 @@
                                              
                                              <br>
                                              <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
-                                             <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Appointments &nbsp;</font></button>
+                                             <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las citas &nbsp;</font></button>
                                              </a>
                                              </center>
                                              <br><br><br><br>

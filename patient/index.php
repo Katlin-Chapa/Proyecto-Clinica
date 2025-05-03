@@ -77,7 +77,7 @@
                             </tr>
                             <tr>
                                 <td colspan="2">
-                                    <a href="../logout.php" ><input type="button" value="Log out" class="logout-btn btn-primary-soft btn"></a>
+                                    <a href="../logout.php" ><input type="button" value="Cerrar Sesión" class="logout-btn btn-primary-soft btn"></a>
                                 </td>
                             </tr>
                     </table>
@@ -130,7 +130,7 @@
                                 </p>
                                 <p class="heading-sub12" style="padding: 0;margin: 0;">
                                     <?php 
-                                date_default_timezone_set('Asia/Kolkata');
+                                date_default_timezone_set('America/Guatemala');
         
                                 $today = date('Y-m-d');
                                 echo $today;
@@ -160,16 +160,12 @@
                         <td >
                             <h3>Bienvenido!</h3>
                             <h1><?php echo $username  ?>.</h1>
-                            <p>¿No tienes idea sobre los médicos? No hay problema, vamos a continuar con 
-                                <a href="doctors.php" class="non-style-link"><b>"Todos los doctores"</b></a> sección o
-                                <a href="schedule.php" class="non-style-link"><b>"Sesiones"</b> </a><br>
-                                Sigue el historial de tus citas pasadas y futuras. También descubre el tiempo estimado de llegada de tu doctor o consultor médico.<br><br>
-                            </p>
+
                             
                             <h3>Consulta a un Doctor Aquí</h3>
                             <form action="schedule.php" method="post" style="display: flex">
 
-                                <input type="search" name="search" class="input-text " placeholder="Search Doctor and We will Find The Session Available" list="doctors" style="width:45%;">&nbsp;&nbsp;
+                                <input type="search" name="search" class="input-text " placeholder="Busca el Doctor y encontraremos la sesión disponible" list="doctors" style="width:45%;">&nbsp;&nbsp;
                                 
                                 <?php
                                     echo '<datalist id="doctors">';
@@ -187,7 +183,7 @@
     ?>
                                 
                            
-                                <input type="Submit" value="Search" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
+                                <input type="Submit" value="Guardar" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
                             
                             <br>
                             <br>
@@ -338,8 +334,8 @@
                                                     <img src="../img/notfound.svg" width="25%">
                                                     
                                                     <br>
-                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">Nothing to show here!</p>
-                                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Channel a Doctor &nbsp;</font></button>
+                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">No hay nada que ver aquí</p>
+                                                    <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Canal a Doctor &nbsp;</font></button>
                                                     </a>
                                                     </center>
                                                     <br><br><br><br>
