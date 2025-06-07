@@ -20,9 +20,6 @@
 </head>
 <body>
     <?php
-
-    //learn from w3schools.com
-
     session_start();
 
     if(isset($_SESSION["user"])){
@@ -34,11 +31,7 @@
         header("location: ../login.php");
     }
     
-    
-
-    //import database
     include("../connection.php");
-
     
     ?>
     <div class="container">
@@ -52,9 +45,8 @@
                                     <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
                                 </td>
                                 <td style="padding:0px;margin:0px;">
-                                    <p class="profile-title">Administrador</p>
-                                    <p class="profile-subtitle">admin@edoc.com</p>
-                                </td>
+                                    <p class="profile-title">Secretari@</p>
+                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
@@ -115,9 +107,7 @@
                                 };
 
                             echo ' </datalist>';
-?>
-                            
-                       
+?>                  
                             <input type="Submit" value="Buscar" class="login-btn btn-primary btn" style="padding-left: 25px;padding-right: 25px;padding-top: 10px;padding-bottom: 10px;">
                         
                         </form>
@@ -166,9 +156,6 @@
                         $sqlmain= "select * from doctor order by docid desc";
 
                     }
-
-
-
                 ?>
                   
                 <tr>
@@ -213,7 +200,7 @@
                                     <img src="../img/notfound.svg" width="25%">
                                     
                                     <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">¡No se encontraron resultados!</p>
                                     <a class="non-style-link" href="doctors.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Show all Doctors &nbsp;</font></button>
                                     </a>
                                     </center>
@@ -347,11 +334,6 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                 '.$email.'<br><br>
-                                </td>
-                            </tr>
-                            <tr>
-                                <td class="label-td" colspan="2">
-                                    <label for="nic" class="form-label">DPI:: </label>
                                 </td>
                             </tr>
                             <tr>
@@ -670,9 +652,6 @@
                                                     $id00=$row00["id"];
                                                     echo "<option value=".$id00.">$sn</option><br/>";
                                                 };
-                
-                
-                
                                                 
                                 echo     '       </select><br><br>
                                         </td>
@@ -739,9 +718,6 @@
                 </div>
                 </div>
     ';
-
-
-
         }; };
     };
 

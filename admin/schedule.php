@@ -19,9 +19,10 @@
 </style>
 </head>
 <body>
-    <?php
 
-    //learn from w3schools.com
+    <?php
+    include("whatsapp.php");
+
 
     session_start();
 
@@ -52,8 +53,7 @@
                                     <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
                                 </td>
                                 <td style="padding:0px;margin:0px;">
-                                    <p class="profile-title">Administrador</p>
-                                    <p class="profile-subtitle">admin@edoc.com</p>
+                                    <p class="profile-title">Secretari@</p>
                                 </td>
                             </tr>
                             <tr>
@@ -284,7 +284,7 @@
                                     <img src="../img/notfound.svg" width="25%">
                                     
                                     <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">¡No se encontraron resultados!</p>
                                     <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las sesiones&nbsp;</font></button>
                                     </a>
                                     </center>
@@ -393,7 +393,7 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <select name="docid" id="" class="box" >
-                                    <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>';
+                                    <option value="" disabled selected hidden>Seleccione un doctor</option><br/>';
                                         
         
                                         $list11 = $database->query("select  * from  doctor order by docname asc;");
@@ -468,10 +468,10 @@
                     <div class="popup">
                     <center>
                     <br><br>
-                        <h2>Session Placed.</h2>
+                        <h2>Sesión colocada</h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                        '.substr($titleget,0,40).' was scheduled.<br><br>
+                        '.substr($titleget,0,40).' se programó.<br><br>
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
@@ -519,6 +519,8 @@
 
 
             $sqlmain12= "select * from appointment inner join patient on patient.pid=appointment.pid inner join schedule on schedule.scheduleid=appointment.scheduleid where schedule.scheduleid=$id;";
+            
+            
             $result12= $database->query($sqlmain12);
             echo '
             <div id="popup1" class="overlay">
@@ -596,9 +598,6 @@
                                  <table width="100%" class="sub-table scrolldown" border="0">
                                  <thead>
                                  <tr>   
-                                        <th class="table-headin">
-                                             ID
-                                         </th>
                                          <th class="table-headin">
                                              Nombre
                                          </th>
@@ -613,6 +612,9 @@
                                              Telefono
                                          </th>
                                          
+                                         <th class="table-headin">
+                                         Mensaje
+                                         </th>
                                  </thead>
                                  <tbody>';
                                  
@@ -629,7 +631,7 @@
                                              <img src="../img/notfound.svg" width="25%">
                                              
                                              <br>
-                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                             <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">¡No se encontraron resultados!</p>
                                              <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las citas &nbsp;</font></button>
                                              </a>
                                              </center>
@@ -647,13 +649,11 @@
                                              $ptel=$row["ptel"];
                                              
                                              echo '<tr style="text-align:center;">
-                                                <td>
-                                                '.substr($pid,0,15).'
-                                                </td>
+
                                                  <td style="font-weight:600;padding:25px">'.
                                                  
                                                  substr($pname,0,25)
-                                                 .'</td >
+                                                 .'</td>
                                                  <td style="text-align:center;font-size:23px;font-weight:500; color: var(--btnnicetext);">
                                                  '.$apponum.'
                                                  
@@ -661,17 +661,12 @@
                                                  <td>
                                                  '.substr($ptel,0,25).'
                                                  </td>
-                                                 
-                                                 
-                
-                                                 
+                                                <td><button onclick="abrirModal(\'' . $ptel . '\')">Enviar WhatsApp</button></td>
+                                     
                                              </tr>';
                                              
                                          }
                                      }
-                                          
-                                     
-                
                                     echo '</tbody>
                 
                                  </table>
@@ -692,6 +687,51 @@
         
     ?>
     </div>
+<!-- Modal de Envío de WhatsApp con plantillas -->
+<div id="whatsapp-modal" class="overlay" style="display:none;">
+    <div class="popup">
+        <center>
+            <h2>Enviar WhatsApp</h2>
+            <a class="close" href="#" onclick="cerrarModal()">&times;</a>
+            <p>Selecciona una plantilla de mensaje:</p>
+            <form method="POST" action="whatsapp.php" id="form-plantilla" target="_blank">
+                <input type="hidden" name="telefono" id="telefono" value="">
+                <input type="hidden" name="mensaje" id="mensajeHidden" value="">
+                <input type="hidden" name="send_whatsapp" value="1">
+
+                <!-- Botones de plantillas -->
+                <button type="button" class="btn-primary btn" style="margin: 10px;" onclick="enviarPlantilla('Hola, le saludamos de la clínica. Su cita está programada para mañana.')">
+                    Confirmación de Cita
+                </button><br>
+                <button type="button" class="btn-primary btn" style="margin: 10px;" onclick="enviarPlantilla('Estimado paciente, le recordamos que tiene una cita pendiente. Por favor, confirme su asistencia.')">
+                    Recordatorio de Cita
+                </button><br>
+                <button type="button" class="btn-primary btn" style="margin: 10px;" onclick="enviarPlantilla('Gracias por visitarnos. Si tiene alguna consulta, no dude en contactarnos.')">
+                    Mensaje de Agradecimiento
+                </button>
+            </form>
+        </center>
+    </div>
+</div>
+
+
+
+<script>
+    function abrirModal(telefono) {
+        document.getElementById('telefono').value = telefono;
+        document.getElementById('whatsapp-modal').style.display = 'block';
+    }
+
+    function cerrarModal() {
+        document.getElementById('whatsapp-modal').style.display = 'none';
+    }
+
+    function enviarPlantilla(mensaje) {
+        document.getElementById('mensajeHidden').value = mensaje;
+        document.getElementById('form-plantilla').submit();
+    }
+</script>
+
 
 </body>
 </html>

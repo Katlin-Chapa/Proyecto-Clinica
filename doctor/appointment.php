@@ -102,7 +102,7 @@
             <table border="0" width="100%" style=" border-spacing: 0;margin:0;padding:0;margin-top:25px; ">
                 <tr >
                     <td>
-                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Administrador de citas</p>
+                        <p style="font-size: 23px;padding-left:12px;font-weight: 600;">Secretari@ de citas</p>
                                            
                     </td>
                     <td width="15%">
@@ -257,7 +257,7 @@
                                     <img src="../img/notfound.svg" width="25%">
                                     
                                     <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">¡No se encontraron resultados!</p>
                                     <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las citas &nbsp;</font></button>
                                     </a>
                                     </center>
@@ -375,7 +375,7 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <select name="docid" id="" class="box" >
-                                    <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>';
+                                    <option value="" disabled selected hidden>Seleccione un doctor</option><br/>';
                                         
         
                                         $list11 = $database->query("select  * from  doctor;");
@@ -450,10 +450,10 @@
                     <div class="popup">
                     <center>
                     <br><br>
-                        <h2>Session Placed.</h2>
+                        <h2>Sesión colocada</h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                        '.substr($titleget,0,40).' was scheduled.<br><br>
+                        '.substr($titleget,0,40).' se programó.<br><br>
                             
                         </div>
                         <div style="display: flex;justify-content: center;">

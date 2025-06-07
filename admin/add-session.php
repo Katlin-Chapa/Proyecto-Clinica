@@ -13,7 +13,6 @@
     
     
     if($_POST){
-        //import database
         include("../connection.php");
         $title=$_POST["title"];
         $docid=$_POST["docid"];

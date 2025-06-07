@@ -20,9 +20,6 @@
 </head>
 <body>
     <?php
-
-    //learn from w3schools.com
-
     session_start();
 
     if(isset($_SESSION["user"])){
@@ -34,9 +31,6 @@
         header("location: ../login.php");
     }
     
-    
-
-    //import database
     include("../connection.php");
 
     
@@ -52,8 +46,7 @@
                                     <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
                                 </td>
                                 <td style="padding:0px;margin:0px;">
-                                    <p class="profile-title">Administrador</p>
-                                    <p class="profile-subtitle">admin@edoc.com</p>
+                                    <p class="profile-title">Secretari@</p>
                                 </td>
                             </tr>
                             <tr>
@@ -124,16 +117,7 @@
 
 
                 </tr>
-               
-                <!-- <tr>
-                    <td colspan="4" >
-                        <div style="display: flex;margin-top: 40px;">
-                        <div class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49);margin-top: 5px;">Schedule a Session</div>
-                        <a href="?action=add-session&id=none&error=0" class="non-style-link"><button  class="login-btn btn-primary btn button-icon"  style="margin-left:25px;background-image: url('../img/icons/add.svg');">Agregar una Sesión</font></button>
-                        </a>
-                        </div>
-                    </td>
-                </tr> -->
+
                 <tr>
                     <td colspan="4" style="padding-top:10px;width: 100%;" >
                     
@@ -196,7 +180,6 @@
                 
                 <?php
                     if($_POST){
-                        //print_r($_POST);
                         $sqlpt1="";
                         if(!empty($_POST["sheduledate"])){
                             $sheduledate=$_POST["sheduledate"];
@@ -209,8 +192,7 @@
                             $docid=$_POST["docid"];
                             $sqlpt2=" doctor.docid=$docid ";
                         }
-                        //echo $sqlpt2;
-                        //echo $sqlpt1;
+
                         $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid";
                         $sqllist=array($sqlpt1,$sqlpt2);
                         $sqlkeywords=array(" where "," and ");
@@ -222,18 +204,11 @@
                                 $key2++;
                             };
                         };
-                        //echo $sqlmain;
 
-                        
-                        
-                        //
                     }else{
                         $sqlmain= "select appointment.appoid,schedule.scheduleid,schedule.title,doctor.docname,patient.pname,schedule.scheduledate,schedule.scheduletime,appointment.apponum,appointment.appodate from schedule inner join appointment on schedule.scheduleid=appointment.scheduleid inner join patient on patient.pid=appointment.pid inner join doctor on schedule.docid=doctor.docid  order by schedule.scheduledate desc";
 
                     }
-
-
-
                 ?>
                   
                 <tr>
@@ -296,7 +271,7 @@
                                     <img src="../img/notfound.svg" width="25%">
                                     
                                     <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">¡No se encontraron resultados!</p>
                                     <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las citas &nbsp;</font></button>
                                     </a>
                                     </center>
@@ -361,10 +336,7 @@
                         </div>
                         </center>
                    </td> 
-                </tr>
-                       
-                        
-                        
+                </tr>    
             </table>
         </div>
     </div>
@@ -417,7 +389,7 @@
                             <tr>
                                 <td class="label-td" colspan="2">
                                     <select name="docid" id="" class="box" >
-                                    <option value="" disabled selected hidden>Choose Doctor Name from the list</option><br/>';
+                                    <option value="" disabled selected hidden>Seleccione un doctor</option><br/>';
                                         
         
                                         $list11 = $database->query("select  * from  doctor;");
@@ -428,10 +400,6 @@
                                             $id00=$row00["docid"];
                                             echo "<option value=".$id00.">$sn</option><br/>";
                                         };
-        
-        
-        
-                                        
                         echo     '       </select><br><br>
                                 </td>
                             </tr>
@@ -492,10 +460,10 @@
                     <div class="popup">
                     <center>
                     <br><br>
-                        <h2>Session Placed.</h2>
+                        <h2>Sesión colocada</h2>
                         <a class="close" href="schedule.php">&times;</a>
                         <div class="content">
-                        '.substr($titleget,0,40).' was scheduled.<br><br>
+                        '.substr($titleget,0,40).' se programó.<br><br>
                             
                         </div>
                         <div style="display: flex;justify-content: center;">
@@ -617,13 +585,10 @@
                             <tr>
                                 <td colspan="2">
                                     <a href="doctors.php"><input type="button" value="OK" class="login-btn btn-primary-soft btn" ></a>
-                                
                                     
                                 </td>
                 
                             </tr>
-                           
-
                         </table>
                         </div>
                     </center>
@@ -633,7 +598,6 @@
             ';  
     }
 }
-
     ?>
     </div>
 

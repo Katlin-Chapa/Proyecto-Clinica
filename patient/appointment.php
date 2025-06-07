@@ -228,7 +228,7 @@
                                     <img src="../img/notfound.svg" width="25%">
                                     
                                     <br>
-                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">¡No se encontraron resultados!</p>
                                     <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las citas &nbsp;</font></button>
                                     </a>
                                     </center>
@@ -280,10 +280,9 @@
                                                                 
                                                                 
                                                                 <div class="h4-search">
-                                                                    Fecha: '.$scheduledate.'<br>Starts: <b>@'.substr($scheduletime,0,5).'</b> (24h)
+                                                                    Fecha: '.$scheduledate.'<br>Inicia: <b>@'.substr($scheduletime,0,5).'</b> (24h)
                                                                 </div>
                                                                 <br>
-                                                                <a href="?action=drop&id='.$appoid.'&title='.$title.'&doc='.$docname.'" ><button  class="login-btn btn-primary-soft btn "  style="padding-top:11px;padding-bottom:11px;width:100%"><font class="tn-in-text">Reservar ahora</font></button></a>
                                                         </div>
                                                                 
                                                     </div>
@@ -366,7 +365,7 @@
                         <h2>Reserva exitosa</h2>
                         <a class="close" href="appointment.php">&times;</a>
                         <div class="content">
-                        Your No. de cita is '.$id.'.<br><br>
+                        Su No. de cita es '.$id.'.<br><br>
                             
                         </div>
                         <div style="display: flex;justify-content: center;">

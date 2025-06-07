@@ -72,7 +72,7 @@
                                 </td>
                                 <td style="padding:0px;margin:0px;">
                                     <p class="profile-title"><?php echo substr($username,0,13)  ?>..</p>
-                                    <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>
+                                 <!--   <p class="profile-subtitle"><?php echo substr($useremail,0,22)  ?></p>-->
                                 </td>
                             </tr>
                             <tr>
@@ -214,7 +214,7 @@
                                                 </td>
                                             </tr>
                                             <tr>
-                                                <td style="width: 25%;">
+                                                <td style="width: 50%;">
                                                     <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex">
                                                         <div>
                                                                 <div class="h1-dashboard">
@@ -227,50 +227,10 @@
                                                                 <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/doctors-hover.svg');"></div>
                                                     </div>
                                                 </td>
-                                                <td style="width: 25%;">
-                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;">
-                                                        <div>
-                                                                <div class="h1-dashboard">
-                                                                    <?php    echo $patientrow->num_rows  ?>
-                                                                </div><br>
-                                                                <div class="h3-dashboard">
-                                                                    Todos los pacientes &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                                                                </div>
-                                                        </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/patients-hover.svg');"></div>
-                                                    </div>
-                                                </td>
+      
                                                 </tr>
                                                 <tr>
-                                                <td style="width: 25%;">
-                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex; ">
-                                                        <div>
-                                                                <div class="h1-dashboard" >
-                                                                    <?php    echo $appointmentrow ->num_rows  ?>
-                                                                </div><br>
-                                                                <div class="h3-dashboard" >
-                                                                    Nueva reserva &nbsp;&nbsp;
-                                                                </div>
-                                                        </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="margin-left: 0px;background-image: url('../img/icons/book-hover.svg');"></div>
-                                                    </div>
-                                                    
-                                                </td>
-
-                                                <td style="width: 25%;">
-                                                    <div  class="dashboard-items"  style="padding:20px;margin:auto;width:95%;display: flex;padding-top:21px;padding-bottom:21px;">
-                                                        <div>
-                                                                <div class="h1-dashboard">
-                                                                    <?php    echo $schedulerow ->num_rows  ?>
-                                                                </div><br>
-                                                                <div class="h3-dashboard" style="font-size: 15px">
-                                                                    Sesiones de hoy
-                                                                </div>
-                                                        </div>
-                                                                <div class="btn-icon-back dashboard-icons" style="background-image: url('../img/icons/session-iceblue.svg');"></div>
-                                                    </div>
-                                                </td>
-                                                
+                    
                                             </tr>
                                         </table>
                                     </center>

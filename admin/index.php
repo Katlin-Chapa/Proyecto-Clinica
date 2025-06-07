@@ -37,8 +37,6 @@
         header("location: ../login.php");
     }
     
-
-    //import database
     include("../connection.php");
 
     
@@ -54,9 +52,8 @@
                                     <img src="../img/user.png" alt="" width="100%" style="border-radius:50%">
                                 </td>
                                 <td style="padding:0px;margin:0px;">
-                                    <p class="profile-title">Administrador</p>
-                                    <p class="profile-subtitle">admin@edoc.com</p>
-                                </td>
+                                    <p class="profile-title">Secretari@</p>
+                                 </td>
                             </tr>
                             <tr>
                                 <td colspan="2">
@@ -222,11 +219,6 @@
                     </td>
                 </tr>
 
-
-
-
-
-
                 <tr>
                     <td colspan="4">
                         <table width="100%" border="0" class="dashbord-tables">
@@ -300,7 +292,7 @@
                                                     <img src="../img/notfound.svg" width="25%">
                                                     
                                                     <br>
-                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">¡No se encontraron resultados!</p>
                                                     <a class="non-style-link" href="appointment.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las citas &nbsp;</font></button>
                                                     </a>
                                                     </center>
@@ -395,7 +387,7 @@
                                                     <img src="../img/notfound.svg" width="25%">
                                                     
                                                     <br>
-                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">We  couldnt find anything related to your keywords !</p>
+                                                    <p class="heading-main12" style="margin-left: 45px;font-size:20px;color:rgb(49, 49, 49)">¡No se encontraron resultados!</p>
                                                     <a class="non-style-link" href="schedule.php"><button  class="login-btn btn-primary-soft btn"  style="display: flex;justify-content: center;align-items: center;margin-left:20px;">&nbsp; Ver todas las sesiones&nbsp;</font></button>
                                                     </a>
                                                     </center>
@@ -463,7 +455,5 @@
             </table>
         </div>
     </div>
-
-
 </body>
 </html>
